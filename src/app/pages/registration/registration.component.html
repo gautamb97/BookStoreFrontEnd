@@ -1,21 +1,50 @@
 <div fxLayoutAlign="center center" fxFlexFill>
-    <mat-card fxFlex="20" style="justify-content: center;">
+    <mat-card fxFlex="20" style="justify-content: center;background-color: #F5F5F5 0% 0% no-repeat padding-box;">
         <img src="../../../assets/2766594.png" style="width: 80%; height: 80%; border-radius: 50%; justify-content: center; margin-left: 10%;">
-        <h3 style="margin-left: 18%;">Online Book Shopping</h3>
+        <h3 style="margin-left: 18%; font: normal normal medium 18px/24px Roboto;
+        letter-spacing: 0px;
+        color: #0A0102;
+        text-transform: uppercase;">Online Book Shopping</h3>
     </mat-card>
-    <mat-card fxFlex="35">
-        <div style="display: flex;">
-              <div>
-                <button mat-button class="menu-item">
-                    LOGIN
-                </button>
-            </div>
-            <div>
-                <button mat-button class="menu-item">
-                    SIGNUP
-                </button>
-            </div>
-        </div>
+    <mat-card fxFlex="25" style="height: 60%;">
+        <mat-tab-group>
+            <mat-tab label="LOGIN">
+                <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" style="padding-top: 10%;">
+                    <mat-form-field hideRequiredMarker appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" name="email" required>
+                    </mat-form-field>
+
+                    <mat-form-field hideRequiredMarker appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" type="password" name="password" required>
+                    </mat-form-field>
+
+                    <button mat-stroked-button class="register-button">Login</button>
+                </form>
+            </mat-tab>
+            <mat-tab label="SIGNUP">
+                <form fxLayout="column" fxLayoutAlign="stretch" style="padding-top: 5%;">
+                    <mat-form-field hideRequiredMarker appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First Name" pattern="^[A-za-z]{3,}" name="firstName" required>
+                    </mat-form-field>
+                    <mat-form-field hideRequiredMarker appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last Name" pattern="^[A-za-z]{3,}" name="lastName" required>
+                    </mat-form-field>
+                    <mat-form-field hideRequiredMarker appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" name="email" required>
+                    </mat-form-field>
+                    <mat-form-field hideRequiredMarker appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[a-zA-Z0-9\#]{8,}" name="lastName" required>
+                    </mat-form-field>
+                    <button class="register-button" mat-stroked-button>Register</button>
+                </form>
+            </mat-tab>
+          </mat-tab-group>
     </mat-card>
 
 </div>
