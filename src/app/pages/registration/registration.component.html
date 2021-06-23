@@ -6,42 +6,11 @@
     <mat-card fxFlex="25" class="main-mat-card-content">
         <mat-tab-group>
             <mat-tab label="LOGIN">
-                <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
-                    <mat-form-field hideRequiredMarker appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input matInput placeholder="Email" name="email" required>
-                    </mat-form-field>
-
-                    <mat-form-field hideRequiredMarker appearance="outline">
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password" type="password" name="password" required>
-                    </mat-form-field>
-
-                    <button mat-stroked-button class="register-button">Login</button>
-                </form>
+                <app-login></app-login>
             </mat-tab>
             <mat-tab label="SIGNUP">
-                <form fxLayout="column" fxLayoutAlign="stretch" class="sign-up-form">
-                    <mat-form-field hideRequiredMarker appearance="outline">
-                        <mat-label>First Name</mat-label>
-                        <input matInput placeholder="First Name" pattern="^[A-za-z]{3,}" name="firstName" required>
-                    </mat-form-field>
-                    <mat-form-field hideRequiredMarker appearance="outline">
-                        <mat-label>Last Name</mat-label>
-                        <input matInput placeholder="Last Name" pattern="^[A-za-z]{3,}" name="lastName" required>
-                    </mat-form-field>
-                    <mat-form-field hideRequiredMarker appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input matInput placeholder="Email" name="email" required>
-                    </mat-form-field>
-                    <mat-form-field hideRequiredMarker appearance="outline">
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password" pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[a-zA-Z0-9\#]{8,}" name="lastName" required>
-                    </mat-form-field>
-                    <button class="register-button" mat-stroked-button>Register</button>
-                </form>
+                <app-sign-up></app-sign-up>
             </mat-tab>
           </mat-tab-group>
     </mat-card>
-
 </div>
