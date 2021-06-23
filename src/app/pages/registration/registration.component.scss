@@ -2,3 +2,37 @@
     background-color: #A03037;
     color: white;
 }
+
+.image-card {
+    justify-content: center;
+    background-color: #efefef;
+
+    h3{
+        margin-left: 18%; font: normal normal medium 18px/24px Roboto;
+        letter-spacing: 0px;
+        color: #0A0102;
+        text-transform: uppercase;
+    }
+}
+
+.image-style{
+    width: 80%; 
+    height: 80%; 
+    border-radius: 50%; 
+    justify-content: center; 
+    margin-left: 10%;
+}
+
+.main-mat-card-content{
+    height: 60%;
+}
+
+.login-form{
+    padding-top: 10%;
+    overflow: hidden;
+}
+
+.sign-up-form{
+    padding-top: 5%;
+    overflow: hidden;
+}

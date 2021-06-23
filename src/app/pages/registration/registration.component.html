@@ -1,15 +1,12 @@
 <div fxLayoutAlign="center center" fxFlexFill>
-    <mat-card fxFlex="20" style="justify-content: center;background-color: #F5F5F5 0% 0% no-repeat padding-box;">
-        <img src="../../../assets/2766594.png" style="width: 80%; height: 80%; border-radius: 50%; justify-content: center; margin-left: 10%;">
-        <h3 style="margin-left: 18%; font: normal normal medium 18px/24px Roboto;
-        letter-spacing: 0px;
-        color: #0A0102;
-        text-transform: uppercase;">Online Book Shopping</h3>
+    <mat-card fxFlex="20" class="image-card">
+        <img src="../../../assets/2766594.png" class="image-style">
+        <h3>Online Book Shopping</h3>
     </mat-card>
-    <mat-card fxFlex="25" style="height: 60%;">
+    <mat-card fxFlex="25" class="main-mat-card-content">
         <mat-tab-group>
             <mat-tab label="LOGIN">
-                <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" style="padding-top: 10%;">
+                <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
                     <mat-form-field hideRequiredMarker appearance="outline">
                         <mat-label>Email</mat-label>
                         <input matInput placeholder="Email" name="email" required>
@@ -24,7 +21,7 @@
                 </form>
             </mat-tab>
             <mat-tab label="SIGNUP">
-                <form fxLayout="column" fxLayoutAlign="stretch" style="padding-top: 5%;">
+                <form fxLayout="column" fxLayoutAlign="stretch" class="sign-up-form">
                     <mat-form-field hideRequiredMarker appearance="outline">
                         <mat-label>First Name</mat-label>
                         <input matInput placeholder="First Name" pattern="^[A-za-z]{3,}" name="firstName" required>
