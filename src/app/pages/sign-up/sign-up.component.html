@@ -1,19 +1,23 @@
 <form fxLayout="column" fxLayoutAlign="stretch" class="sign-up-form">
     <mat-form-field hideRequiredMarker appearance="outline">
         <mat-label>First Name</mat-label>
-        <input matInput placeholder="First Name" pattern="^[A-za-z]{3,}" name="firstName" required>
+        <input matInput placeholder="First Name" pattern="^[A-za-z]{3,}" name="firstName" [(ngModel)]="user.firstName" [formControl]="firstName" required>
+        <mat-error *ngIf="firstName.invalid">{{getError()}}</mat-error>
     </mat-form-field>
     <mat-form-field hideRequiredMarker appearance="outline">
         <mat-label>Last Name</mat-label>
-        <input matInput placeholder="Last Name" pattern="^[A-za-z]{3,}" name="lastName" required>
+        <input matInput placeholder="Last Name" pattern="^[A-za-z]{3,}" name="lastName" [(ngModel)]="user.lastName" [formControl]="lastName" required>
+        <mat-error *ngIf="lastName.invalid">{{errorMessage()}}</mat-error>
     </mat-form-field>
     <mat-form-field hideRequiredMarker appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" name="email" required>
+        <input matInput placeholder="Email" name="email" [(ngModel)]="user.email" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
     <mat-form-field hideRequiredMarker appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Password" pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[a-zA-Z0-9\#]{8,}" name="lastName" required>
+        <input matInput placeholder="Password" pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[a-zA-Z0-9\#]{8,}" name="password" [(ngModel)]="user.password" [formControl]="password" required>
+        <mat-error *ngIf="password.invalid">{{passwordErrorMessage()}}</mat-error>
     </mat-form-field>
     <button class="register-button" mat-stroked-button>Register</button>
 </form>
