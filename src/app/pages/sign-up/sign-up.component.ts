@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { User } from './sign-up.model';
+import { UserService } from 'src/app/services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -10,7 +12,8 @@ import { User } from './sign-up.model';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: UserService,
+              private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -45,4 +48,17 @@ export class SignUpComponent implements OnInit {
   data: any
   error: any
 
+  submit() {
+    this.service.registerUser(this.user).subscribe(response => {
+      console.log(response)
+      this.data = response
+      this.message = this.data.message
+      this.snackBar.open(this.message, '', { duration: 2000 })
+    }, error => {
+      console.log(error)
+      this.error = error
+      this.message = this.error.error.message
+      this.snackBar.open(this.message, '', { duration: 2000 })
+    })
+  }
 }
