@@ -20,4 +20,8 @@ export class UserService {
   forgotPassword(data: any) {
     return this.httpService.postData(environment.URL + 'forgotPassword', data)
   }
+
+  resetPassword(data: any, token: any) {
+    return this.httpService.postDataUsingToken(environment.URL + 'resetPassword', data, token)
+  }
 }
