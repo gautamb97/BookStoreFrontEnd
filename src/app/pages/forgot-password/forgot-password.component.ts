@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from './forgot-password.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotPasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: UserService,
+              private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+  }
+
+  user = new User()
+  message: any
+  data: any
+  error: any
+  
+  submit() {
+    this.service.forgotPassword(this.user).subscribe(response => {
+      console.log(response)
+      this.data = response
+      this.message = this.data.message
+      this.snackBar.open(this.message, '', { duration: 2000 })
+    }, error => {
+      console.log(error)
+      this.error = error
+      this.message = this.error.error.error
+      this.snackBar.open(this.message, '', { duration: 2000 })
+    })
   }
 
 }
