@@ -1,9 +1,11 @@
+@import '../../style/colorVariables';
+
 .sign-up-form{
     padding-top: 5%;
     overflow: hidden;
 }
 
 .register-button{
-    background-color: #A03037;
-    color: white;
+    background-color: $darkRed;
+    color: $white;
 }

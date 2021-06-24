@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       this.message = this.data.message
       this.token = this.data.token
       localStorage.setItem('token', this.token)
-      this.snackBar.open(this.message, '', { duration: 2000 })
+      this.snackBar.open(this.message, '', { duration: 2000 });
     }, error => {
       console.log(error)
       this.error = error
