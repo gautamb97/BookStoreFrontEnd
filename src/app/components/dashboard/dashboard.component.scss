@@ -1,0 +1,58 @@
+@import '../../style/colorVariables';
+
+.toolbar{
+    background-color: $darkRed;
+
+    img{
+        margin-left: 8%;
+    }
+    h6{
+        padding-left: 1%;
+        color: $white;
+    }
+
+    .profile-icon{
+        color: $white;
+        margin-left: 55%;
+        h6{
+            font-size: small;
+        }
+    }
+}
+
+.form{
+    width: 300%;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.search-input{
+    text-decoration: none;
+    border: none;
+    color: $white;
+    padding-left: 1%;
+}
+
+.search-button{
+    padding-top: 1%;
+    padding-left: 2%;
+    color: #9D9D9D;
+}
+
+.form {
+    display: flex;
+    margin-left: 40%;
+}
+
+.cart-icon{
+    margin-left: 5%;
+    color: $white;
+    h6{
+        font-size: small;
+    }
+}
+
+.dashboard{
+    overflow: hidden;
+}
