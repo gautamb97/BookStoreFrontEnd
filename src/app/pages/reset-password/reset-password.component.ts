@@ -3,6 +3,7 @@ import { UserService } from 'src/app/services/user.service';
 import { ResetPasswordData } from './reset-password.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reset-password',
@@ -16,6 +17,11 @@ export class ResetPasswordComponent implements OnInit {
               private router: ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+
+  password = new FormControl('', Validators.required);
+  passwordErrorMessage() {
+    return (this.password.hasError('required')) ? 'You must enter a value' : 'Must have One Capital, one small latter and one number and a symbol';
   }
 
   resetData = new ResetPasswordData();
