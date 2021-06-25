@@ -22,7 +22,7 @@
 
 .form{
     width: 300%;
-    background: #FCFCFC 0% 0% no-repeat padding-box;
+    background: $dimWhite 0% 0% no-repeat padding-box;
     border-radius: 3px;
     opacity: 1;
 }
@@ -37,7 +37,7 @@
 .search-button{
     padding-top: 1%;
     padding-left: 2%;
-    color: #9D9D9D;
+    color: $fadedGray;
 }
 
 .form {
@@ -55,4 +55,21 @@
 
 .dashboard{
     overflow: hidden;
+}
+
+.subheading{
+    margin-left: 10%;
+    padding-top: 2%;
+    h1{
+        font-weight: bold;
+    }
+}
+
+.subheading-container{
+    display: flex;
+}
+
+.sort{
+    padding-top: 1%;
+    margin-left: 60%;
 }
