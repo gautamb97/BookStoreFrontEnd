@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Login } from './login.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from 'src/app/services/user.service';
@@ -11,7 +12,8 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginComponent implements OnInit {
 
   constructor(private snackBar: MatSnackBar,
-              private service: UserService) { }
+              private service: UserService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +31,8 @@ export class LoginComponent implements OnInit {
       this.data = response
       this.message = this.data.message
       this.token = this.data.token
-      localStorage.setItem('token', this.token)
+      localStorage.setItem('token', this.token);
+      this.router.navigate(['/dashboard'])
       this.snackBar.open(this.message, '', { duration: 2000 });
     }, error => {
       console.log(error)
