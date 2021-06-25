@@ -4,7 +4,7 @@
         <h6>Bookstore</h6>
         <form class="f1">
             <div class="form">
-                    <mat-icon class="search-button">search</mat-icon>
+                <mat-icon class="search-button">search</mat-icon>
                 <input matInput placeholder="Search" class="search-input">
             </div>
         </form>
@@ -17,16 +17,21 @@
             <h6>Cart</h6>
         </div>
     </mat-toolbar>
+    <div class="main-content">
     <div class="subheading-container">
-    <div class="subheading">
-        <h1>Books</h1>
+        <div class="subheading">
+            <h1>Books</h1>
+        </div>
+        <div class="sort">
+            <mat-form-field appearance="outline">
+                <mat-label>sort by relevance</mat-label>
+                <mat-select disableRipple>
+                </mat-select>
+            </mat-form-field>
+        </div>
     </div>
-    <div class="sort">
-        <mat-form-field appearance="outline">
-            <mat-label>sort by relevance</mat-label>
-            <mat-select disableRipple>
-            </mat-select>
-          </mat-form-field>
+    <div style="margin-right: 10%;">
+        <app-get-books></app-get-books>
     </div>
     </div>
 </div>
