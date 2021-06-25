@@ -1,0 +1,22 @@
+<div class="main-box">
+    <ng-container *ngFor="let array of books">
+        <div class="box" fxFlexAlign="stretch">
+            <mat-card class="card">
+                <div class=array-content>
+                    <div class="image">
+                        <img src="{{array.image}}">
+                    </div>
+                    <div class="description-content">
+                        {{array.title}}
+                    </div>
+                    <div>
+                        by {{array.author}}
+                    </div>
+                    <div>
+                        {{array.price}}
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </ng-container>
+</div>
