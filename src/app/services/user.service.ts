@@ -24,4 +24,8 @@ export class UserService {
   resetPassword(data: any, token: any) {
     return this.httpService.postDataUsingToken(environment.URL + 'resetPassword', data, token)
   }
+
+  getBooks() {
+    return this.httpService.getData(environment.URL + 'books')
+  }
 }
