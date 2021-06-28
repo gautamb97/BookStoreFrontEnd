@@ -11,6 +11,8 @@ import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +22,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { GetBooksComponent } from './components/get-books/get-books.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
     LoginComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    DashboardComponent,
+    GetBooksComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +51,9 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
     ReactiveFormsModule,
     MatSnackBarModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
