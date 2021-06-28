@@ -1,4 +1,5 @@
 @import '../../style/colorVariables';
+@import '../../style/mixin';
 
 .login-form{
     padding-top: 10%;
@@ -6,8 +7,7 @@
 }
 
 .login-button{
-    background-color: $darkRed;
-    color: $white;
+    @include buttonStyle
 }
 
 .link{
