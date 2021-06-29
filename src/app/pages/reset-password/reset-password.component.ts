@@ -29,6 +29,10 @@ export class ResetPasswordComponent implements OnInit {
   data: any
   error: any
 
+  /**
+   * @description : It takes new password by user and send it to server and fetch the token from URL
+   * @method      : resetPassword from UserService
+  */
   submit() {
     const token = this.router.snapshot.params
     this.service.resetPassword(this.resetData, token).subscribe(response => {

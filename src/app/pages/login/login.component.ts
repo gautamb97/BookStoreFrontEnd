@@ -25,6 +25,11 @@ export class LoginComponent implements OnInit {
   token: any
   userData: any
 
+  /**
+   * @description : It takes the email and password by user and give permission for login
+   *                into bookStore
+   * @method      : login from UserService
+  */
   submit() {
     this.service.login(this.user).subscribe(response => {
       console.log(response)

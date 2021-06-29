@@ -21,6 +21,10 @@ export class ForgotPasswordComponent implements OnInit {
   data: any
   error: any
   
+  /**
+   * @description : It takes the email from user and send an email to the particular user
+   * @method      : forgot password from UserService
+  */
   submit() {
     this.service.forgotPassword(this.user).subscribe(response => {
       console.log(response)

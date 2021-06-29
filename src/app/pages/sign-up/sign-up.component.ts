@@ -48,6 +48,11 @@ export class SignUpComponent implements OnInit {
   data: any
   error: any
 
+  /**
+   * @description : Takes fields by user and send to server for registering new user
+   * @method      : registerUser from UserService
+  */
+
   submit() {
     this.service.registerUser(this.user).subscribe(response => {
       console.log(response)
